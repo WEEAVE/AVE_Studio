@@ -3,44 +3,23 @@
     <head>
         <title>AVE Studio</title>
         <style>
-            .main_background {
-                background: linear-gradient(to bottom, #00B4D8, #90E0EF);
+            body {
+                background-image: url('bgweb.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
                 color: white;
             }
-            .arealogindev {
+            .ave {
                 position: relative;
-                left: 70%;
-                width: 25%;
-                height: 7%;
-                border: 8px groove;
-                border-radius: 5%;
-                border-color: white;
-                text-align: center;
-                background-color: #1e1e1e;
+                width: 200px;
+                height: 200px;
+                top: auto;
+                left: 42%;
             }
-            #closedevlog {
-                position: relative;
-                height: 2%;
-                width: 25%;
-                left: 70%;
-                border: 8px groove;
-                border-color: white;
-                text-align: center;
-                background-color: red;
-                font-size: 30px;
-                text-align: center;
-                cursor: pointer;
-            }
-            #devlogabout {
-                position: absolute;
-                text-align: center;
-                border: 8px groove;
+            .banner {
+                width: 100%;
                 background-color: white;
-                color: black;
-                left: 35%;
-                top: 65px;
-                width: 287px;
-                font-size: 20px;
             }
             .pagedevtxt {
                 font-size: 32px;
@@ -129,7 +108,7 @@
                 background-color: red;
             }
             .dcbutt {
-                background-color: blue;
+                background-color: skyblue;
             }
             .igbutt {
                 background-color: pink;
@@ -162,23 +141,9 @@
 </style>
         </style>
     </head>
-    <body class="main_background">
-        <h1 align="center" style="color: yellow;">AVE</h1>
+    <body>
+        <img src="AVE.png" alt="logo AVE" class="ave">
         <div id="page1">
-            <div class="arealogindev">
-                <input style="width: 50%; margin-top: 5%;" name="un" oninput="showbutt()" type="text" placeholder="username:">
-                <input style="width: 50%; margin-top: 10%;" name="pw" oninput="showbutt()" type="password" placeholder="password:">
-                <br>
-                <span>
-                    <button id="buttlog" style="margin-top: 7%; position: absolute; left: 25%; display: none; cursor: pointer;" type="submit" onclick="submitdev()">login</button>
-                    <button id="buttreset" style="margin-top: 7%; position: absolute; left: 55%; display: none; cursor: pointer;" type="reset" onclick="resetdev()">reset</button>
-                </span>
-            </div>
-            <div id="closedevlog" onclick="tutupdevlog()">CLOSE</div>
-             <fieldset id="devlogabout">
-                 <legend style="background-color: yellow; color: red;">WARNING!!</legend>
-                 silahkan tutup halaman login yang berada disebelah kanan ini jika anda bukan pengembang atau tidak ada kepetingan
-             </fieldset>
              <div class="txtpage1">
                  selamat datang di website ave.<br>
                  anda bisa melihat beberapa layanan yang kami berikan.<br>
@@ -241,10 +206,10 @@
     <h1 style="color: black;">HUBUNGI KAMI</h1>
     informasi lebih lanjut: DM kami!
     <div class="contact_buttons">
-        <div class="wabutt" onclick="watap()">WHATSAPP</div>
-        <div class="emailbutt" onclick="emailtap()">EMAIL</div>
-        <div class="dcbutt" onclick="dctap()">DISCORD</div>
-        <div class="igbutt" onclick="igtap()">INSTAGRAM</div>
+        <div class="wabutt" onclick="wa()">WHATSAPP</div>
+        <div class="emailbutt" onclick="email()">EMAIL</div>
+        <div class="dcbutt" onclick="dc()">DISCORD</div>
+        <div class="igbutt" onclick="ig()">INSTAGRAM</div>
     </div>
 </div>
 
@@ -307,6 +272,18 @@
             document.getElementsByClassName('arealogindev')[0].style.display = 'none';
             document.getElementById('closedevlog').style.display = 'none';
             document.getElementById('devlogabout').style.display = 'none';
+        }
+        function wa() {
+            window.location.href = "https://wa.me/+6285881330296?text=Halo%20saya%20tertarik%20dengan%20produk%20Anda";
+        }
+        function email() {
+            window.location.href = "mailto:contactavestudiocs@gmail.com?subject=Halo%20Saya%20tertarik&body=Halo,%20saya%20tertarik%20dengan%20produk%20Anda.";
+        }
+        function dc() {
+            window.location.href = "https://discord.gg/VWe5vZSx";
+        }
+        function ig() {
+            window.location.href = "https://www.instagram.com/ave.studio_01?igsh=MWRub2N6NDExZmt1Zw==https://www.instagram.com/ave.studio_01?igsh=MWRub2N6NDExZmt1Zw==";
         }
         </script>
     </body>
